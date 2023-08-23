@@ -1,0 +1,18 @@
+<table class="table border-dark">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Developer</th>
+        <th scope="col"><button class="btn btn-primary btn-sm" routerLink="/details/{{game?._id}}/developers-create">Add developer</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let developer of developers">
+        <th scope="row">{{developer.name}}</th>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteDeveloper(game._id, developer._id)">Delete developer</button>&nbsp;
+          <button class="btn btn-warning btn-sm" routerLink="/details/{{game?._id}}/developers-update/{{developer?._id}}">Update developer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

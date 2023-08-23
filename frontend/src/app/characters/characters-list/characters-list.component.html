@@ -1,0 +1,21 @@
+<table class="table border-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Character</th>
+      <th scope="col">Title</th>
+      <th scope="col">Role</th>
+      <th scope="col"><button class="btn btn-primary btn-sm" routerLink="/details/{{game?._id}}/characters-create">Add character</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let character of characters">
+      <th scope="row">{{character.name}}</th>
+      <td>{{character.title}}</td>
+      <td>{{character.role}}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteCharacter(game._id, character._id)">Delete character</button>&nbsp;
+        <button class="btn btn-warning btn-sm" routerLink="/details/{{game?._id}}/characters-update/{{character?._id}}">Update character</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

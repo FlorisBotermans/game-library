@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Details of <span><strong>{{ game?.name }}</strong></span></h2>
+  
+  <div class="card border-dark" style="width: 30rem;">
+    <div class="card-body bg-dark">
+      <h5 class="card-title"><strong>{{game?.name}}</strong></h5>
+      <p class="card-text"><strong>Description:</strong> {{game?.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>Platform:</strong> {{game?.platform}}</li>
+      <li class="list-group-item"><strong>Category:</strong> {{game?.category}}</li>
+    </ul>
+  </div>
+
+  <app-characters-list [game]="game"></app-characters-list>
+  <app-developers-list [game]="game"></app-developers-list>
+
+  <button class="btn btn-danger" routerLink="/games-list">Go back to games</button>
+</div>

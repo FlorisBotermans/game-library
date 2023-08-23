@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Edit <span><strong>{{game?.name}}</strong></span></h2>
+
+  <form [formGroup]="updateGameForm">
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Name: </label>
+      <div class="col-10">
+        <input type="text" formControlName="name" class="form-control" placeholder="{{game?.name}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Description: </label>
+      <div class="col-10">
+        <input type="text" formControlName="description" class="form-control" placeholder="{{game?.description}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Platform: </label>
+      <div class="col-10">
+        <input type="text" formControlName="platform" class="form-control" placeholder="{{game?.platform}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Category: </label>
+      <div class="col-10">
+        <input type="text" formControlName="category" class="form-control" placeholder="{{game?.category}}">
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="updateGame(gameId);" [disabled]="!updateGameForm.valid">Update game</button>&nbsp;
+    <button class="btn btn-danger" type="reset" routerLink="/games-list">Go back to games</button>
+  </form>
+</div>

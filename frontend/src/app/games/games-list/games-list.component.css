@@ -1,0 +1,17 @@
+.card-header {
+    background-color: #404040;
+}
+
+div .card-header button {
+    float: right;
+    margin-left: 5px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: none;
+    color: grey;
+}

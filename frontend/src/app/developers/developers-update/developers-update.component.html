@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Edit <span><strong>{{developer?.name}}</strong></span></h2>
+  
+    <form [formGroup]="updateDeveloperForm">
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Name: </label>
+        <div class="col-10">
+          <input type="text" formControlName="name" class="form-control" placeholder="{{developer?.name}}">
+        </div>
+      </div>
+      <button class="btn btn-primary" (click)="updateDeveloper(gameId, developerId);" [disabled]="!updateDeveloperForm.valid">Update developer</button>&nbsp;
+      <button class="btn btn-danger" type="reset" routerLink="/details/{{gameId}}">Go back to details</button>
+    </form>
+  </div>
